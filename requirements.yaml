@@ -1,0 +1,12 @@
+packages:
+  "framer-motion": "For premium scroll animations and UI transitions"
+  "lucide-react": "For crisp, beautiful icons across the application"
+  "clsx": "For conditional tailwind class merging"
+  "tailwind-merge": "For resolving tailwind class conflicts"
+
+images: []
+
+notes:
+  - This is a pure frontend landing page as requested, no backend integration required.
+  - Using a custom dark theme matching the #0B0B0F aesthetic.
+  - Implemented a simulated Demo Booking modal to ensure all CTAs are fully interactive.
