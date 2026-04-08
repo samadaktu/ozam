@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, CheckCircle2, Loader2 } from "lucide-react";
+import { sendDemoRequest } from "@/lib/emailService";
 
 interface DemoModalProps {
   isOpen: boolean;
@@ -11,16 +12,22 @@ export function DemoModal({ isOpen, onClose }: DemoModalProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
   const [formData, setFormData] = useState({ name: "", email: "", company: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
-    setTimeout(() => {
+    
+    try {
+      await sendDemoRequest(formData);
       setStatus("success");
       setTimeout(() => {
         onClose();
         setTimeout(() => setStatus("idle"), 300);
-      }, 2000);
-    }, 1500);
+      }, 2500);
+    } catch (error) {
+      console.error("Demo request error:", error);
+      setStatus("idle");
+      // Could add error toast here if needed
+    }
   };
 
   return (

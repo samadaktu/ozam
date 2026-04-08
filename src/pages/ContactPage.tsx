@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Mail, MapPin, Clock, CheckCircle2, Loader2, MessageSquare, ArrowRight } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 import { sendContactEmail } from "@/lib/emailService";
 import { DemoModal } from "@/components/DemoModal";
 
@@ -52,6 +53,10 @@ const topics = [
 ];
 
 export default function ContactPage() {
+  useSEO({
+    title: "Contact Us",
+    description: "Connect with OZMA's AI architects today. Whether you're ready to automate or just exploring options, we're here to help."
+  });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [formData, setFormData] = useState({

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { DemoModal } from "@/components/DemoModal";
 import { useState } from "react";
 import { Plus, Minus, ArrowRight } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const categories = [
   {
@@ -70,6 +71,10 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 }
 
 export default function FaqPage() {
+  useSEO({
+    title: "FAQ",
+    description: "Common questions about AI scaling, autonomous agents, and how OZMA helps businesses automate operations."
+  });
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (

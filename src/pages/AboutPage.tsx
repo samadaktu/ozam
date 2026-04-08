@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { DemoModal } from "@/components/DemoModal";
 import { useState } from "react";
 import { Target, Users, Zap, Globe, ArrowRight } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const team = [
   { name: "Zeenath Fatimah", role: "CEO & Co-Founder", initial: "ZF", color: "#F7803C" },
@@ -22,6 +23,10 @@ const values = [
 ];
 
 export default function AboutPage() {
+  useSEO({
+    title: "About Us",
+    description: "Learn about OZMA's mission to orchestrate the future of intelligent operations and our team of AI experts."
+  });
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (

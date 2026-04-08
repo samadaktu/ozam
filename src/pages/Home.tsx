@@ -11,8 +11,13 @@ import { CaseStudies } from "@/components/sections/CaseStudies";
 import { Faq } from "@/components/sections/Faq";
 import { Cta } from "@/components/sections/Cta";
 import { DemoModal } from "@/components/DemoModal";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function Home() {
+  useSEO({
+    title: "Home",
+    description: "Welcome to OZMA, your partner in engineering the future with autonomous AI agents and intelligent workflow automation."
+  });
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openDemo = () => setIsModalOpen(true);

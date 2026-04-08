@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { DemoModal } from "@/components/DemoModal";
 import { useState } from "react";
 import { Bot, Workflow, TrendingUp, Cpu, CheckCircle2, ArrowRight } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const services = [
   {
@@ -65,6 +66,10 @@ const services = [
 ];
 
 export default function ServicesPage() {
+  useSEO({
+    title: "Our Services",
+    description: "Explore our AI solutions: Autonomous AI Agents, Workflow Automation, AI Ads Optimization, and Custom AI Engineering."
+  });
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (

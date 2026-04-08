@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { DemoModal } from "@/components/DemoModal";
 import { useState } from "react";
 import { ArrowRight, Calendar, Clock, User } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const posts = [
   {
@@ -76,6 +77,10 @@ const posts = [
 ];
 
 export default function BlogPage() {
+  useSEO({
+    title: "Blog",
+    description: "Insights on AI, automation, and business growth from the OZMA engineering team."
+  });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [featured, ...rest] = posts;
 
