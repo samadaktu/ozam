@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "wouter";
 import { Mail, MapPin, Clock, CheckCircle2, Loader2, MessageSquare, ArrowRight } from "lucide-react";
 import { sendContactEmail } from "@/lib/emailService";
 import { DemoModal } from "@/components/DemoModal";
@@ -318,12 +319,12 @@ export default function ContactPage() {
                 className="p-8 bg-gray-50 rounded-[32px] border border-black/5 text-center"
               >
                 <p className="text-[#555] font-medium mb-4">Looking for immediate answers?</p>
-                <a
+                <Link
                   href="/faq"
                   className="inline-flex items-center h-12 px-6 rounded-full border border-black/5 bg-white text-[#111] font-black text-xs uppercase tracking-widest hover:bg-[#111] hover:text-white transition-all duration-300"
                 >
                   Browse our FAQ
-                </a>
+                </Link>
               </motion.div>
             </div>
           </div>

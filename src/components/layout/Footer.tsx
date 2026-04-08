@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 export function Footer() {
   const year = new Date().getFullYear();
 
@@ -18,31 +20,25 @@ export function Footer() {
             <div>
               <p className="text-xs font-bold text-[#111] uppercase tracking-widest mb-4">Company</p>
               <nav className="flex flex-col gap-3 text-sm text-[#666]">
-                {["About Us", "Blog", "Careers"].map((link) => (
-                  <a key={link} href="#" className="hover:text-[#111] transition-colors duration-150">
-                    {link}
-                  </a>
-                ))}
+                <Link href="/about" className="hover:text-[#111] transition-colors duration-150">About Us</Link>
+                <Link href="/blog" className="hover:text-[#111] transition-colors duration-150">Blog</Link>
+                <Link href="/faq" className="hover:text-[#111] transition-colors duration-150">FAQ</Link>
               </nav>
             </div>
             <div>
               <p className="text-xs font-bold text-[#111] uppercase tracking-widest mb-4">Services</p>
               <nav className="flex flex-col gap-3 text-sm text-[#666]">
-                {["AI Agents", "AI Automations", "AI Ads", "Custom AI"].map((link) => (
-                  <a key={link} href="#" className="hover:text-[#111] transition-colors duration-150">
-                    {link}
-                  </a>
-                ))}
+                <Link href="/services" className="hover:text-[#111] transition-colors duration-150">Our Services</Link>
+                <Link href="/services" className="hover:text-[#111] transition-colors duration-150">AI Agents</Link>
+                <Link href="/services" className="hover:text-[#111] transition-colors duration-150">AI Automations</Link>
               </nav>
             </div>
             <div>
               <p className="text-xs font-bold text-[#111] uppercase tracking-widest mb-4">Legal</p>
               <nav className="flex flex-col gap-3 text-sm text-[#666]">
-                {["Privacy Policy", "Terms of Service", "Contact"].map((link) => (
-                  <a key={link} href="#" className="hover:text-[#111] transition-colors duration-150">
-                    {link}
-                  </a>
-                ))}
+                <Link href="/contact" className="hover:text-[#111] transition-colors duration-150">Contact</Link>
+                <a href="#" className="hover:text-[#111] transition-colors duration-150">Privacy Policy</a>
+                <a href="#" className="hover:text-[#111] transition-colors duration-150">Terms</a>
               </nav>
             </div>
           </div>
