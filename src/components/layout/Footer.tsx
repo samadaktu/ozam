@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between gap-10 mb-10">
           <div className="max-w-xs">
             <div className="mb-4">
-              <img src={`${import.meta.env.BASE_URL}ozma-logo.png`.replace(/\/+/g, '/')} alt="OZMA Logo" className="h-8 w-auto" />
+              <img src={`${import.meta.env.BASE_URL}ozma-logo.png`.replace(/\/+/g, '/')} alt="OZMA Logo" className="h-10 w-auto" />
             </div>
             <p className="text-[#888] text-sm leading-relaxed">
               Orchestrating intelligent automation for the modern enterprise. 
