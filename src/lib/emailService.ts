@@ -63,3 +63,28 @@ export const sendDemoRequest = async (formData: {
     throw error;
   }
 };
+
+export const sendNewsletterSubscription = async (email: string) => {
+  try {
+    const formDataToSend = new FormData();
+    formDataToSend.append("Form Type", "Newsletter Subscription");
+    formDataToSend.append("Email Address", email);
+    formDataToSend.append("_captcha", "false");
+    formDataToSend.append("_template", "table");
+    formDataToSend.append("_subject", `New Newsletter Subscription: ${email}`);
+
+    const response = await fetch("https://formsubmit.co/info@ozma.in", {
+      method: "POST",
+      body: formDataToSend,
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to send subscription");
+    }
+
+    return { success: true };
+  } catch (error) {
+    console.error("Newsletter Service Error:", error);
+    throw error;
+  }
+};
