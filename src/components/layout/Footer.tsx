@@ -9,10 +9,11 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between gap-10 mb-10">
           <div className="max-w-xs">
             <div className="mb-4">
-              <span className="text-xl font-black text-[#111] tracking-tight">OZMA</span>
+              <img src="/OZMA%20Logo.png" alt="OZMA Logo" className="h-8 w-auto" />
             </div>
             <p className="text-[#888] text-sm leading-relaxed">
-              Orchestrating intelligent automation for the modern enterprise.
+              Orchestrating intelligent automation for the modern enterprise. 
+              The leading <strong>AI Agency in Aligarh</strong>, India.
             </p>
           </div>
 

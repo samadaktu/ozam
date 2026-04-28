@@ -54,8 +54,9 @@ const topics = [
 
 export default function ContactPage() {
   useSEO({
-    title: "Contact Us",
-    description: "Connect with OZMA's AI architects today. Whether you're ready to automate or just exploring options, we're here to help."
+    title: "Contact Best AI Agency in Aligarh | OZMA AI India",
+    description: "Contact OZMA, the top-rated AI agency in Aligarh. Connect with our AI architects for discovery calls on autonomous agents and intelligent automation across India.",
+    keywords: "Contact AI Agency Aligarh, AI Consulting India, Hire AI Agency, AI Automation Contact, OZMA Aligarh Office"
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");

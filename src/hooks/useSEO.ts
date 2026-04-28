@@ -3,9 +3,10 @@ import { useEffect } from "react";
 interface SEOProps {
   title: string;
   description?: string;
+  keywords?: string;
 }
 
-export function useSEO({ title, description }: SEOProps) {
+export function useSEO({ title, description, keywords }: SEOProps) {
   useEffect(() => {
     document.title = `${title} | OZMA`;
     
@@ -15,5 +16,12 @@ export function useSEO({ title, description }: SEOProps) {
         metaDescription.setAttribute("content", description);
       }
     }
-  }, [title, description]);
+
+    if (keywords) {
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        metaKeywords.setAttribute("content", keywords);
+      }
+    }
+  }, [title, description, keywords]);
 }

@@ -15,6 +15,7 @@ type CardItem = {
   textColor?: string;
   color?: string;
   icon?: string;
+  img?: string;
 };
 
 type ColumnItem = 
@@ -24,16 +25,16 @@ type ColumnItem =
 const columns: ColumnItem[] = [
   { 
     kind: "single", 
-    card: { type: "profile", name: "Elena S.", role: "AI Workflow Architect", initial: "E", color: "#F7803C" } 
+    card: { type: "profile", name: "Elena S.", role: "AI Workflow Architect", initial: "E", color: "#F7803C", img: "/profiles/elena.webp" } 
   },
   { 
     kind: "double", 
     top: { type: "stat", value: "92%", label: "Reduction in manual entry", bg: "#DBEAFE", textColor: "#1E3A8A" },
-    bottom: { type: "profile", name: "Amara K.", role: "Ads Strategist", initial: "A", color: "#10B981" }
+    bottom: { type: "profile", name: "Amara K.", role: "Ads Strategist", initial: "A", color: "#10B981", img: "/profiles/amara.webp" }
   },
   { 
     kind: "single", 
-    card: { type: "profile", name: "Julian M.", role: "LLM Fine-tuning Expert", initial: "J", color: "#3B82F6" } 
+    card: { type: "profile", name: "Julian M.", role: "LLM Fine-tuning Expert", initial: "J", color: "#3B82F6", img: "/profiles/julian.webp" } 
   },
   { 
     kind: "double", 
@@ -42,16 +43,16 @@ const columns: ColumnItem[] = [
   },
   { 
     kind: "single", 
-    card: { type: "profile", name: "Vikram R.", role: "Automation Lead", initial: "V", color: "#8B5CF6" } 
+    card: { type: "profile", name: "Vikram R.", role: "Automation Lead", initial: "V", color: "#8B5CF6", img: "/profiles/vikram.webp" } 
   },
   { 
     kind: "double", 
     top: { type: "stat", value: "$2M+", label: "Operating costs saved", bg: "#Fef3c7", textColor: "#92400e" },
-    bottom: { type: "profile", name: "Sophie T.", role: "Integration Lead", initial: "S", color: "#EC4899" }
+    bottom: { type: "profile", name: "Sophie T.", role: "Integration Lead", initial: "S", color: "#EC4899", img: "/profiles/sophie.webp" }
   },
   { 
     kind: "single", 
-    card: { type: "profile", name: "Marcus D.", role: "Data Scientist", initial: "M", color: "#6366F1" } 
+    card: { type: "profile", name: "Marcus D.", role: "Data Scientist", initial: "M", color: "#6366F1", img: "/profiles/marcus.webp" } 
   },
   { 
     kind: "double", 
@@ -82,7 +83,10 @@ function Card({ item, height }: { item: CardItem; height: "tall" | "short" }) {
       className={`flex-shrink-0 w-full rounded-3xl overflow-hidden relative shadow-md group border border-white/20 hover:scale-[1.02] transition-transform duration-300`}
       style={{ backgroundColor: item.color, height: height === "tall" ? "320px" : "154px" }}
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent transition-opacity group-hover:opacity-80" />
+      {item.img && (
+        <img src={item.img} alt={item.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 transition-opacity group-hover:opacity-100" />
       <div className="absolute bottom-0 left-0 right-0 p-5">
         <div className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white font-bold text-sm mb-2 border border-white/30">
           {item.initial}

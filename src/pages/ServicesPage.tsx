@@ -67,8 +67,9 @@ const services = [
 
 export default function ServicesPage() {
   useSEO({
-    title: "Our Services",
-    description: "Explore our AI solutions: Autonomous AI Agents, Workflow Automation, AI Ads Optimization, and Custom AI Engineering."
+    title: "AI Services Aligarh | Automation & AI Agents India",
+    description: "Explore our range of AI services at OZMA. From autonomous AI agents to high-performance automation, we are the top AI agency in Aligarh providing cutting-edge solutions across India.",
+    keywords: "AI Services Aligarh, AI Automation India, Autonomous AI Agents, AI Media Buying, Enterprise AI Solutions"
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
 

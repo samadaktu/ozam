@@ -78,8 +78,9 @@ const posts = [
 
 export default function BlogPage() {
   useSEO({
-    title: "Blog",
-    description: "Insights on AI, automation, and business growth from the OZMA engineering team."
+    title: "AI & Automation Blog | OZMA AI Agency Aligarh",
+    description: "Read the latest insights on AI, automation, and business growth from OZMA, the top AI agency in Aligarh. Learn how to scale your business with autonomous AI agents.",
+    keywords: "AI Blog Aligarh, Automation Insights India, AI Agency Blog, Autonomous Agents News, Business AI Strategy"
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [featured, ...rest] = posts;

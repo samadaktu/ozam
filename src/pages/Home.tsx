@@ -15,8 +15,9 @@ import { useSEO } from "@/hooks/useSEO";
 
 export default function Home() {
   useSEO({
-    title: "Home",
-    description: "Welcome to OZMA, your partner in engineering the future with autonomous AI agents and intelligent workflow automation."
+    title: "AI Agency in Aligarh & India",
+    description: "Welcome to OZMA, the leading AI Agency in Aligarh. We engineer the future with autonomous AI agents and intelligent workflow automation for businesses in India and beyond.",
+    keywords: "AI Agency in Aligarh, AI Agency in India, AI Automation, AI Workflow Engineering, Autonomous AI Agents"
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
 

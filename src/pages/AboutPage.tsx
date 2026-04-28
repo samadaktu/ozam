@@ -21,8 +21,9 @@ const values = [
 
 export default function AboutPage() {
   useSEO({
-    title: "About Us",
-    description: "Learn about OZMA's mission to orchestrate the future of intelligent operations and our team of AI experts."
+    title: "About OZMA | Top AI Agency in Aligarh",
+    description: "Learn about OZMA's mission to orchestrate the future of intelligent operations. As a leading AI agency in Aligarh and India, our team of AI experts builds the technology that builds businesses.",
+    keywords: "About OZMA, AI Agency Aligarh, AI Experts India, Intelligent Operations, AI Automation Mission"
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
 

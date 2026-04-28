@@ -72,8 +72,9 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 export default function FaqPage() {
   useSEO({
-    title: "FAQ",
-    description: "Common questions about AI scaling, autonomous agents, and how OZMA helps businesses automate operations."
+    title: "AI & Automation FAQ | OZMA AI Agency Aligarh",
+    description: "Find answers to frequently asked questions about AI scaling, autonomous agents, and how OZMA helps businesses in Aligarh and India automate operations.",
+    keywords: "AI FAQ Aligarh, Automation FAQ India, Hire AI Agents, AI Implementation FAQ, OZMA Services FAQ"
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
 
