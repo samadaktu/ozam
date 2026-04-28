@@ -84,7 +84,7 @@ function Card({ item, height }: { item: CardItem; height: "tall" | "short" }) {
       style={{ backgroundColor: item.color, height: height === "tall" ? "320px" : "154px" }}
     >
       {item.img && (
-        <img src={item.img} alt={item.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <img src={`${import.meta.env.BASE_URL}${item.img}`.replace(/\/+/g, '/')} alt={item.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 transition-opacity group-hover:opacity-100" />
       <div className="absolute bottom-0 left-0 right-0 p-5">

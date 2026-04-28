@@ -7,9 +7,9 @@ import { Target, Users, Zap, Globe, ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
 const team = [
-  { name: "Abdul Samad", role: "CEO & Founder", initial: "AS", color: "#F7803C" },
-  { name: "Sayyam Khan", role: "Head of AI Engineering", initial: "SK", color: "#3B82F6" },
-  { name: "Shariz Ahmad", role: "Head of Client Success", initial: "SA", color: "#14B8A6" },
+  { name: "Abdul Samad", role: "CEO & Founder", initial: "AS", color: "#F7803C", img: "/profiles/abdul.webp" },
+  { name: "Sayyam Khan", role: "Head of AI Engineering", initial: "SK", color: "#3B82F6", img: "/profiles/sayyam.webp" },
+  { name: "Shariz Ahmad", role: "Head of Client Success", initial: "SA", color: "#14B8A6", img: "/profiles/shariz.webp" },
 ];
 
 const values = [
@@ -208,10 +208,16 @@ export default function AboutPage() {
                 className="group p-10 bg-white rounded-[40px] border border-black/5 hover:border-black/10 hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.06)] transition-all duration-500 text-center"
               >
                 <div
-                  className="w-20 h-20 rounded-[28px] mx-auto flex items-center justify-center text-white font-black text-3xl mb-8 group-hover:rotate-6 transition-all duration-500 shadow-lg shadow-black/10"
+                  className="w-20 h-20 rounded-[28px] mx-auto mb-8 group-hover:rotate-6 transition-all duration-500 shadow-lg shadow-black/10 relative overflow-hidden"
                   style={{ backgroundColor: member.color }}
                 >
-                  {member.initial}
+                  {member.img ? (
+                    <img src={`${import.meta.env.BASE_URL}${member.img}`.replace(/\/+/g, '/')} alt={member.name} className="absolute inset-0 w-full h-full object-cover" />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-white font-black text-3xl">
+                      {member.initial}
+                    </div>
+                  )}
                 </div>
                 <p className="text-xl font-black text-[#111] tracking-tight">{member.name}</p>
                 <p className="text-xs text-[#888] font-black uppercase tracking-[0.15em] mt-2">{member.role}</p>

@@ -42,7 +42,7 @@ export function Navbar({ onBookDemo }: NavbarProps) {
         <div className="max-w-[1200px] mx-auto px-6 h-[64px] flex items-center justify-between">
           <div className="flex items-center gap-10">
             <Link href="/" className="flex items-center select-none cursor-pointer">
-              <img src="/OZMA%20Logo.png" alt="OZMA Logo" className="h-8 w-auto" />
+              <img src={`${import.meta.env.BASE_URL}ozma-logo.png`.replace(/\/+/g, '/')} alt="OZMA Logo" className="h-8 w-auto" />
             </Link>
             <nav className="hidden md:flex items-center gap-6">
               {navLinks.map(({ label, href }) => (
@@ -117,7 +117,7 @@ export function Navbar({ onBookDemo }: NavbarProps) {
             <div className="p-6">
               <div className="mb-5 flex items-center justify-between border-b border-[#e5e7eb] pb-4">
                 <Link href="/" className="flex items-center">
-                  <img src="/OZMA%20Logo.png" alt="OZMA Logo" className="h-8 w-auto" />
+                  <img src={`${import.meta.env.BASE_URL}ozma-logo.png`.replace(/\/+/g, '/')} alt="OZMA Logo" className="h-8 w-auto" />
                 </Link>
                 <button
                   onClick={() => setMobileOpen(false)}
