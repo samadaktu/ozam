@@ -71,7 +71,7 @@ export function Navbar({ onBookDemo }: NavbarProps) {
             <button
               onClick={onBookDemo}
               style={{ backgroundColor: "#F7803C", color: "#ffffff" }}
-              className="inline-flex items-center justify-center rounded-full font-semibold text-sm h-9 px-5 transition-all duration-200 hover:opacity-90 active:scale-[0.97] cursor-pointer shadow-sm"
+              className="hidden md:inline-flex items-center justify-center rounded-full font-semibold text-sm h-9 px-5 transition-all duration-200 hover:opacity-90 active:scale-[0.97] cursor-pointer shadow-sm"
             >
               Book a Demo
             </button>
