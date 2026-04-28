@@ -7,12 +7,9 @@ import { Target, Users, Zap, Globe, ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
 const team = [
-  { name: "Zeenath Fatimah", role: "CEO & Co-Founder", initial: "ZF", color: "#F7803C" },
-  { name: "Ayesha Noor", role: "CTO & Co-Founder", initial: "AN", color: "#7C3AED" },
-  { name: "Hira Siddiqui", role: "Head of AI Engineering", initial: "HS", color: "#3B82F6" },
-  { name: "Ifra Nazim", role: "Head of Client Success", initial: "IN", color: "#14B8A6" },
-  { name: "Fatima Arif", role: "Lead Automation Architect", initial: "FA", color: "#EC4899" },
-  { name: "Maira Fatima", role: "AI Research Lead", initial: "MF", color: "#F59E0B" },
+  { name: "Abdul Samad", role: "CEO & Founder", initial: "AS", color: "#F7803C" },
+  { name: "Sayyam Khan", role: "Head of AI Engineering", initial: "SK", color: "#3B82F6" },
+  { name: "Shariz Ahmad", role: "Head of Client Success", initial: "SA", color: "#14B8A6" },
 ];
 
 const values = [
